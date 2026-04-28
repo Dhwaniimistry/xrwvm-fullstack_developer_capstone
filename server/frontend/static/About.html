@@ -1,71 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>About Us</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <title>About Us</title>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Dealerships</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+  <div class="container-fluid">
+    <h2 style="padding-right: 5%;">Dealerships</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item active"><a class="nav-link" href="/about">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger;" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-<!-- CONTENT -->
-<div class="container mt-5">
-
-    <h1 class="text-center mb-4">About Our Dealership Portal</h1>
-
+<div class="card" style="width: 80%; margin: auto; margin-top:5%; padding: 20px;">
+  
+  <div class="banner" name="about-header">
+    <h1>About Us</h1>
     <p>
-        Welcome to our Car Dealership Management System. We connect customers with trusted dealerships
-        and provide transparent reviews, ratings, and car information.
+      Welcome to Best Cars Dealership, home to the best cars in North America. 
+      We specialize in offering high-quality domestic and imported vehicles at competitive and reasonable prices. 
+      Our mission is to ensure customer satisfaction through transparency, trust, and excellent service.
     </p>
+  </div>
 
-    <div class="row mt-4">
+  <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 30px;">
 
-        <div class="col-md-4 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" width="120">
-            <h4>Trusted Dealers</h4>
-            <p>Verified dealerships across multiple states.</p>
-        </div>
-
-        <div class="col-md-4 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" width="120">
-            <h4>Customer Reviews</h4>
-            <p>Real feedback from real buyers.</p>
-        </div>
-
-        <div class="col-md-4 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" width="120">
-            <h4>Car Information</h4>
-            <p>Detailed car make, model, and specifications.</p>
-        </div>
-
-    </div>
-
-    <div class="mt-5">
-        <h3>Our Team</h3>
-        <p>
-            Built by a dedicated development team focused on full-stack Django applications,
-            API integration, and cloud deployment.
+    <div class="card" style="width: 30%;">
+      <img class="card-img-top" src="/static/team_aarav.jpg" alt="Aarav Shah">
+      <div class="card-body">
+        <p class="title"><strong>Aarav Shah</strong></p>
+        <p>Sales Manager</p>
+        <p class="card-text">
+          Aarav leads our sales team with over 8 years of experience in the automotive industry, ensuring customers find the perfect car for their needs.
         </p>
+        <p>aarav.shah@bestcars.com</p>
+      </div>
     </div>
 
+    <div class="card" style="width: 30%;">
+      <img class="card-img-top" src="/static/team_meera.jpg" alt="Meera Patel">
+      <div class="card-body">
+        <p class="title"><strong>Meera Patel</strong></p>
+        <p>Customer Relations Head</p>
+        <p class="card-text">
+          Meera ensures every customer receives top-tier service and support throughout their buying journey.
+        </p>
+        <p>meera.patel@bestcars.com</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30%;">
+      <img class="card-img-top" src="/static/team_karan.jpg" alt="Karan Mehta">
+      <div class="card-body">
+        <p class="title"><strong>Karan Mehta</strong></p>
+        <p>Technical Specialist</p>
+        <p class="card-text">
+          Karan handles all vehicle inspections and ensures every car meets our strict quality and safety standards.
+        </p>
+        <p>karan.mehta@bestcars.com</p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 </body>
