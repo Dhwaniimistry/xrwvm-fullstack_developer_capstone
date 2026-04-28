@@ -1,71 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/style.css">
-  <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Dealerships</a>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
         </ul>
-      </div>
     </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-       <h1>About Us</h1>
-  Welcome to Best Cars dealership, home to the best cars in North America. We deal in selling domestic and imported cars at reasonable prices.
+</nav>
 
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
+<!-- CONTENT -->
+<div class="container mt-5">
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
+    <h1 class="text-center mb-4">About Our Dealership Portal</h1>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+    <p>
+        Welcome to our Car Dealership Management System. We connect customers with trusted dealerships
+        and provide transparent reviews, ratings, and car information.
+    </p>
+
+    <div class="row mt-4">
+
+        <div class="col-md-4 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" width="120">
+            <h4>Trusted Dealers</h4>
+            <p>Verified dealerships across multiple states.</p>
         </div>
-      </div>
+
+        <div class="col-md-4 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" width="120">
+            <h4>Customer Reviews</h4>
+            <p>Real feedback from real buyers.</p>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" width="120">
+            <h4>Car Information</h4>
+            <p>Detailed car make, model, and specifications.</p>
+        </div>
+
     </div>
+
+    <div class="mt-5">
+        <h3>Our Team</h3>
+        <p>
+            Built by a dedicated development team focused on full-stack Django applications,
+            API integration, and cloud deployment.
+        </p>
     </div>
-    </div>
-    
+
 </div>
 
+</body>
 </html>
