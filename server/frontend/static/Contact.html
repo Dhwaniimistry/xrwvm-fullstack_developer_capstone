@@ -4,109 +4,136 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
 
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/style.css">
+    <!-- Bootstrap (optional but helpful) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar-custom {
+            background-color: #76c7c0;
+            padding: 15px;
+        }
+
+        .navbar-custom a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navbar-custom a.active {
+            font-weight: bold;
+        }
+
+        .navbar-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 40px;
+        }
+
+        /* Main Card */
+        .contact-card {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            margin: 40px auto;
+            width: 80%;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Top Image */
+        .banner-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Divider */
+        .divider {
+            border-left: 2px solid #ccc;
+            height: 200px;
+            margin: auto;
+        }
+
+        /* Left icon */
+        .icon {
+            font-size: 80px;
+            color: #76c7c0;
+            text-align: center;
+        }
+
+        /* Right text */
+        .contact-info {
+            color: #5a7bd8;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: #5a7bd8;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-
-        <h2 style="padding-right: 5%;">Dealerships</h2>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size: larger;" href="/">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" style="font-size: larger; font-weight: bold;" href="/contact">
-                        Contact Us
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
+    <!-- Navbar -->
+    <div class="navbar-custom d-flex align-items-center">
+        <div class="navbar-title">Dealerships</div>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/contact" class="active">Contact Us</a>
     </div>
-</nav>
 
-<!-- CONTENT -->
-<div class="container mt-5">
+    <!-- Contact Card -->
+    <div class="contact-card">
 
-    <h1 class="text-center mb-3">Get in Touch</h1>
+        <!-- Banner Image -->
+        <img src="https://images.unsplash.com/photo-1583267746897-2cf415887172" class="banner-img">
 
-    <p class="text-center" style="font-size: 18px;">
-        We’re here to help you find your perfect car. Whether you have questions about pricing,
-        availability, or services, our team is ready to assist you anytime.
-    </p>
+        <hr>
 
-    <div class="row justify-content-center mt-4">
+        <div class="row mt-4 align-items-center">
 
-        <div class="col-md-7">
+            <!-- Left Side -->
+            <div class="col-md-5 text-center">
+                <div class="icon">🎧</div>
+            </div>
 
-            <div class="card p-4 shadow-sm">
+            <!-- Divider -->
+            <div class="col-md-1 d-flex justify-content-center">
+                <div class="divider"></div>
+            </div>
 
-                <h4 class="mb-3">Send us a message</h4>
+            <!-- Right Side -->
+            <div class="col-md-6 contact-info">
 
-                <form>
+                <p><b>Contact Customer Service</b><br>
+                support@bestcars.com</p>
 
-                    <div class="form-group mb-3">
-                        <label>Name</label>
-                        <input type="text" class="form-control" placeholder="Your full name">
-                    </div>
+                <p><b>Contact our National Advertising team</b><br>
+                NationalSales@bestcars.com</p>
 
-                    <div class="form-group mb-3">
-                        <label>Email</label>
-                        <input type="email" class="form-control" placeholder="you@example.com">
-                    </div>
+                <p><b>Contact our Public Relations team</b><br>
+                PR@bestcars.com</p>
 
-                    <div class="form-group mb-3">
-                        <label>Message</label>
-                        <textarea class="form-control" rows="5" placeholder="Write your message here..."></textarea>
-                    </div>
+                <p><b>Contact the bestcars.com offices</b><br>
+                312-611-1111</p>
 
-                    <button type="submit" class="btn btn-info btn-block" style="width:100%;">
-                        Send Message
-                    </button>
-
-                </form>
+                <p><b>Become a bestcars.com car dealer</b><br>
+                Visit growwithbestcars.com</p>
 
             </div>
 
         </div>
     </div>
-
-    <!-- CONTACT INFO -->
-    <div class="text-center mt-5">
-
-        <h5>📍 Address</h5>
-        <p>Best Cars Dealership, SG Highway, Ahmedabad, Gujarat, India</p>
-
-        <h5>📧 Email</h5>
-        <p>contact@bestcars.com</p>
-
-        <h5>📞 Phone</h5>
-        <p>+91 98765 43210</p>
-
-        <h5>🕒 Working Hours</h5>
-        <p>Monday – Saturday: 9:00 AM – 7:00 PM</p>
-
-    </div>
-
-</div>
 
 </body>
 </html>
