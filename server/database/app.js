@@ -45,12 +45,14 @@ async function seedDB() {
 
 seedDB();
 
-// Routes
+// ---------------- ROUTES ----------------
+
+// Home
 app.get('/', (req, res) => {
   res.send("Welcome to the Mongoose API");
 });
 
-// Fetch all reviews
+// ---------------- FETCH ALL REVIEWS ----------------
 app.get('/fetchReviews', async (req, res) => {
   try {
     const reviews = await Review.find();
@@ -60,17 +62,18 @@ app.get('/fetchReviews', async (req, res) => {
   }
 });
 
-// Fetch reviews by dealer id
+// ---------------- FETCH REVIEWS BY DEALER ----------------
 app.get('/fetchReviews/dealer/:id', async (req, res) => {
   try {
-    const reviews = await Review.find({ dealership: req.params.id });
+    const dealerId = parseInt(req.params.id);
+    const reviews = await Review.find({ dealership: dealerId });
     res.json({ status: 200, reviews });
   } catch (err) {
     res.json({ status: 500, error: err.message });
   }
 });
 
-// Fetch all dealerships
+// ---------------- FETCH ALL DEALERS ----------------
 app.get('/fetchDealers', async (req, res) => {
   try {
     const dealers = await Dealership.find();
@@ -80,38 +83,40 @@ app.get('/fetchDealers', async (req, res) => {
   }
 });
 
-// Fetch dealerships by state
+// ---------------- FETCH DEALERS BY STATE ----------------
 app.get('/fetchDealers/:state', async (req, res) => {
   try {
-    const dealers = await Dealership.find({ state: req.params.state });
+    const dealers = await Dealership.find({ st: req.params.state });
     res.json({ status: 200, dealerships: dealers });
   } catch (err) {
     res.json({ status: 500, error: err.message });
   }
 });
 
-// Fetch dealer by ID
+// ---------------- FETCH DEALER BY ID ----------------
 app.get('/fetchDealer/:id', async (req, res) => {
   try {
-    const dealer = await Dealership.findById(req.params.id);
+    const dealerId = parseInt(req.params.id);
+    const dealer = await Dealership.findOne({ id: dealerId });
     res.json({ status: 200, dealership: dealer });
   } catch (err) {
     res.json({ status: 500, error: err.message });
   }
 });
 
-// Insert review
+// ---------------- INSERT REVIEW ----------------
 app.post('/insert_review', async (req, res) => {
   try {
     const data = req.body;
 
-    const documents = await Review.find().sort({ id: -1 });
-    let new_id = documents.length > 0 ? documents[0].id + 1 : 1;
+    // Generate new ID
+    const lastReview = await Review.findOne().sort({ id: -1 });
+    const new_id = lastReview ? lastReview.id + 1 : 1;
 
     const review = new Review({
       id: new_id,
       name: data.name,
-      dealership: data.dealership,
+      dealership: parseInt(data.dealership),
       review: data.review,
       purchase: data.purchase,
       purchase_date: data.purchase_date,
@@ -129,6 +134,7 @@ app.post('/insert_review', async (req, res) => {
   }
 });
 
+// ---------------- START SERVER ----------------
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

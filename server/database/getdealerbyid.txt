@@ -1,0 +1,2 @@
+curl http://localhost:3030/fetchDealer/15
+{"status":500,"error":"Cast to ObjectId failed for value \"15\" (type string) at path \"_id\" for model \"Dealership\""}
